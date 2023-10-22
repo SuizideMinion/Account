@@ -1,3 +1,6 @@
 {
-    "Wiki": true
+    "Wiki": true,
+    "Ticket": true,
+    "Migrationstool": true,
+    "Gameserver": true
 }

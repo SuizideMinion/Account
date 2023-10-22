@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Module Wiki</title>
+@extends('layouts.app')
 
-       {{-- Laravel Vite - CSS File --}}
-       {{-- {{ module_vite('build-wiki', 'Resources/assets/sass/app.scss') }} --}}
-
-    </head>
-    <body>
+@section('module')
         @yield('content')
-
-        {{-- Laravel Vite - JS File --}}
-        {{-- {{ module_vite('build-wiki', 'Resources/assets/js/app.js') }} --}}
-    </body>
-</html>
+@endsection

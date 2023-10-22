@@ -42,4 +42,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getData()
+    {
+        return $this->hasMany(UserData::class)->pluck('value', 'key');
+    }
+
+    public function getAvatar($link)
+    {
+        return ( $link == '' ?? "/images/" . $link );
+    }
+
+    public function userPermission()
+    {
+        return $this->hasMany(UserPermission::class)->pluck('user_id', 'key');
+    }
 }
