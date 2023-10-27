@@ -17,9 +17,32 @@
                 color: black;
                 ">
                 <h5>{{ $Server->tag }}</h5>
+                <span><a href="/useraccount/{{ $Server->id }}">Play</a></span>
             </div>
             @endforeach
         </div>
     </div>
     @endforeach
+
+
+    <div class="container">
+        <div class="row">
+            @foreach($UserAccs as $Server)
+                <div class="col" style="
+                    min-width:300px;
+                    height: 188px;
+                    border-radius: 20px;
+                    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url(/images/{{ $Game->image }});
+                    padding: 10px;
+                    margin: 10px;
+                    background-size: cover;
+                    text-align:center;
+                    color: black;
+                    ">
+                    <h5>{{ $Server->name }}</h5>
+                    <span><a href="/useraccount/{{ $Server->id }}">Play</a></span>
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection
